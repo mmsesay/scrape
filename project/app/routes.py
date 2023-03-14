@@ -108,6 +108,7 @@ def register():
 
     # check if user already exists
     user = User.query.filter_by(email=post_data.get('email')).first()
+    print(user)
     if not user:
         try:
             user = User(
@@ -120,7 +121,7 @@ def register():
             db.session.commit()
 
             responseObject = {
-                'status': 200,
+                'status': 201,
                 'message': 'Successfully registered.'
             }
             return make_response(jsonify(responseObject)), 201

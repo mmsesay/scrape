@@ -34,3 +34,17 @@ class User(db.Model):
 
     def __repr__(self):
         return f'User : {self.email}'
+
+
+
+class Records(db.Model):
+    """
+    This model handles saving the records from the api response into the database
+    """
+    id = db.Column(db.Integer, primary_key=True)
+    records = db.Column(db.Text, nullable=False)
+    created_at = db.Column(db.DateTime, nullable=False,
+                            default=datetime.now)
+
+    def __repr__(self):
+            return f'Record : {self.id}'
