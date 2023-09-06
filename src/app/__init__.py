@@ -2,9 +2,9 @@
 """
 Filename        :   __init__.py
 Description     :   This file contains the whole logic for the application
-Author          :   Muhammad Sesay
-Email           :   contact@maej.dev
-Started writing :   8/March/2023
+Author          :   Legacy Dev Team
+Email           :   [muhammad.sesay@legacynetwork.io, ]
+Started writing :   30.08.2023
 Completed on    :   in progress
 """
 import os
@@ -12,10 +12,13 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from flask_migrate import Migrate
+from app.routes.twitter import twitter
 
 
 app = Flask(__name__)
 CORS(app) # enable cors
+
+app.register_blueprint(twitter)
 
 # app secret key
 app.config['SECRET_KEY'] = 'devkey'

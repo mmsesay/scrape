@@ -19,7 +19,7 @@ A simple web api that enable users to search for health related topics and a cou
 
 - **Please run the following commands on your terminal to setup the db:**
 
-  - `cd project` to access the project main directory
+  - `cd src` to access the project main directory
   - `python` or `python3` to access the interactive shell
   - `from app import db, app` this commands starts references the db and flask app
   - `with app.app_context():` press enter after
