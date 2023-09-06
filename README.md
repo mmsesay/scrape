@@ -1,10 +1,11 @@
-# speedykom-searcher-api
+# scrape
 
-A simple web api that enable users to search for health related topics and a couple of articles to read
+A twitter web scraper can be used to scrape a list of Twitter features
 
 ## Built With
 
 - Flask
+- Selenium
 - Request
 
 ## Getting Started
